@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title class="ios_left_padding">Debug Values</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="content_font nicefont">
+   Debug values can be found here.
+   <BR><BR>
+
+   <div class="debug_header">Network Available</div>
+   <div class="debug_val">{{ comProvider.bNetworkOk }}</div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">Unique Device ID</div>
+   <div class="debug_val">{{ comProvider.iUUID }}</div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">Media Query Level/Size</div>
+   <div class="debug_val"><div class="media_query_test_box debug_media_query_size"></div></div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">App Registered - <span (click)="funcTestReggedManual()">check</span></div>
+   <div class="debug_val">{{ comProvider.bAppRegistered }}</div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">App Connected (fields added to Account)?</div>
+   <div class="debug_val">{{ comProvider.bAppConnected }}</div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">Currently Set License</div>
+   <div class="debug_val">{{ comProvider.sLicenseCurrent }}</div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">Currently Set Dealer Group ID</div>
+   <div class="debug_val force_uppercase">{{ comProvider.sDealerGroupID }}</div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">Currently Set Username</div>
+   <div class="debug_val">{{ comProvider.userName }}</div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">Currently Set Password</div>
+   <div class="debug_val">{{ comProvider.userPass }}</div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">Currently Manufacture Type</div>
+   <div class="debug_val">{{ comProvider.sMfrType }}</div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">User/Pass/Dealer Group ID API Call Valid</div>
+   <div class="debug_val">{{ this.sUserPassOk }}</div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">Users Max Period Lookups</div>
+   <div class="debug_val">{{ this.iUserMaxLookups }} <sup>(Defined by dealer group limit, user hard cap, or freebie)</sup></div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">Users Current Period Lookup Count</div>
+   <div class="debug_val">{{ this.iUserCurrentLookups }} <sup>(From user total_lookups field, or freebie SearchHistory)</sup></div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">Users/Devices Current Calculated Remaing Lookups for Period</div>
+   <div class="debug_val">{{ this.iUserRemainingLookups }}</div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">Drop Tracker DB</div>
+   <div class="debug_val"><button class="maintbutton" ion-button block color="secondary" (click)="funcDropTableButton()" >Drop Table</button></div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">Clear Tracker DB</div>
+   <div class="debug_val"><button class="maintbutton" ion-button block color="secondary" (click)="funcClearTableButton()" >Clear Table Rows</button></div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">Get Tracker Table Count</div>
+   <div class="debug_val"><button class="maintbutton" ion-button block color="secondary" (click)="funcGetTableRowCount()" >Get Table Row Count</button></div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">Add Row To Tracker</div>
+   <div class="debug_val"><button class="maintbutton" ion-button block color="secondary" (click)="funcAddRowToTable()" >Add Row Count</button></div>
+   <div class="smallspace2"></div><BR>
+
+   <div class="debug_header">Get Account Row from DB</div>
+   <div class="debug_val"><button class="maintbutton" ion-button block color="secondary" (click)="funcGetAccountRow()" >Get Account Row</button></div>
+   <div class="smallspace2"></div><BR>
+</ion-content>

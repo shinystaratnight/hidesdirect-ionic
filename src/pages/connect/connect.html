@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="ios_left_padding">Hydes Ordering App Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="custom_background5 content_font_dark nicefont" id="loginpage">
+  <div class="standard_box">
+      <ion-grid>
+           <ion-row>
+              <ion-col text-left col-12 col-sm text-left><img src="assets/imgs/hydes_direct_logo.png" class="img-responsive connect_logo_hydes"></ion-col>
+           </ion-row>
+      </ion-grid>
+      <div class="smallspace4"></div>
+
+      <div class="pagetextpadding">
+         Welcome to the Hydes Ordering app.  Please login with your already 
+         provided account. 
+         <BR><div class="smallspace4"></div>
+      </div>
+
+      <div class="smallspace3"></div>
+      <form [formGroup]="formConnect">
+        <ion-grid>
+            <ion-row>
+                <ion-col text-left col-12 col-sm>
+                      <ion-item> <!-- demo@closemore.io -->
+                        <ion-label floating><i class="fa fa-fw fa-user"></i> Account (Email Address) <i class="fa fa-asterisk"></i></ion-label>
+                        <ion-input value="scottg@particle.net" (ionFocus)="funcEmailTapped()" class="item-md-custom" [formControl]="formConnect.controls['sFormFieldConnectEmail']" [(ngModel)]="sFormFieldConnectEmail" type="email"></ion-input>
+                      </ion-item>
+                      <div class="smallspace2"></div><BR>
+                </ion-col>
+            </ion-row>
+            <ion-row id="continuebox">
+              <ion-col text-center col-12><div class="buttonbox"><button id="continuebutton" class="standardbutton" ion-button block (click)="funcContinueButton()" [disabled]="!sFormFieldConnectEmail">CONTINUE</button></div></ion-col>
+            </ion-row>
+            
+            <div id="passwordbox" class="hidethis">
+                <ion-row>
+                  <div class="pagetextpadding">
+                     Enter your password below.  If you forgot your password please contact support.<BR>
+                     <div class="smallspace4"></div><div class="smallspace2"></div>
+                  </div>
+                </ion-row>
+                <ion-row>
+                    <ion-col text-left col-12 col-sm>
+                          <ion-item> <!-- Test123! -->
+                            <ion-label floating><i class="fa fa-fw fa-key"></i> Password <i class="fa fa-asterisk"></i></ion-label>
+                            <ion-input value="hydes123" class="item-md-custom" [formControl]="formConnect.controls['sFormFieldConnectPwd']" [(ngModel)]="sFormFieldConnectPwd" type="password"></ion-input>
+                          </ion-item>
+                          <div class="smallspace2"></div><BR>
+                    </ion-col>
+                </ion-row>
+                <ion-row id="continuebox">
+                  <ion-col text-center col-12><div class="buttonbox"><button id="loginbutton" class="standardbutton" ion-button block (click)="funcConnect()" [disabled]="!sFormFieldConnectEmail || !sFormFieldConnectPwd">LOGIN</button></div></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col text-right col-12><div class="smallspace3"></div><div class="backlink" (click)="funcBackLinkFromLogin()"><i class="fa fa-caret-left"></i> Back</div><BR></ion-col>
+                </ion-row>
+            </div> 
+            <div id="createbox" class="hidethis">
+                <ion-row>
+                  <div class="pagetextpadding">
+                     An account could not be found for the email you have provided above. 
+                     If you require assistance please contact our support department at 
+                     888-445-9097.<BR>
+                     <div class="smallspace1"></div>
+                  </div>
+                </ion-row>
+                <ion-row style="display: none;">
+                  <ion-col text-center col-12><div class="buttonbox"><button id="createaccountbutton" class="standardbutton" ion-button block (click)="funcFreeTrialButton()">CREATE ACCOUNT</button></div></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col text-right col-12><div class="smallspace3"></div><div class="backlink" (click)="funcBackLinkFromCreate()"><i class="fa fa-caret-left"></i> Back</div><BR></ion-col>
+                </ion-row>
+            </div>
+        </ion-grid>
+      </form>
+
+      <BR>
+      <div class="standard_box centerthis">
+         <div class="aboutline_long"></div>
+         <div class="smallspace2"></div>
+         <a href="mailto:support@hydesdirect.com" class="aboutlink">support@hydesdirect.com</a>&nbsp;&bull;&nbsp;<span class="aboutfoot">888.445.9097</span>
+      </div>
+      <BR><BR>
+  </div>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="ios_left_padding">close<span class="text_logo_color">more</span> Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="custom_background5 content_font nicefont">
+   <div class="standard_box">
+       <img src="assets/imgs/closemore_logo.png" class="img-responsive connect_logo">
+       <!--
+       <BR>
+       You may adjust your close<span class="logotextcolor">more</span> settings below. 
+       <div class="smallspace5"></div>-->
+       <BR>
+       <ion-item class="custom_checkbox_item" no-lines>
+           <ion-label class="turn_off_wrap"><span class="checkbox_text">Audio summary on lookup</span></ion-label>
+           <ion-checkbox [checked]="checkboxSettingVoiceChange" (ionChange)="funcSettingVoiceChange($event)" color="light"></ion-checkbox>
+       </ion-item>       
+   </div>
+</ion-content>

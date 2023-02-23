@@ -1,0 +1,32 @@
+.ios
+{
+    page-manual 
+    {
+        .searchbar-ios .searchbar-input
+        {
+            height: 4.2rem !important;
+            font-size: 1.8rem;
+            color: #242424;
+        }
+        
+        .searchbar-ios .searchbar-search-icon
+        {
+           top: 14px;
+        }
+    }
+}
+
+.md
+{
+    page-manual 
+    {
+         /* .searchbar-input { font-size: 1.7rem !important } */
+
+         .searchbar-search-icon
+         {
+             background-size: 24px !important;
+             left: 14px !important;
+             top: 11px !important;
+         }
+    }
+}

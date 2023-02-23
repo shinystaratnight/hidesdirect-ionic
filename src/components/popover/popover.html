@@ -1,0 +1,15 @@
+<div class="" [ngClass]="(this.sPopupAccuracy != 'X')?'popoverbox':'popoverbox_nobar'">
+  <span (click)="funcClosePopover()" class="popover_times_container"><i class="fa fa-times-circle popover_times"></i></span>
+  {{ sPopupText }}
+  <div class="progress_box" *ngIf="this.sPopupAccuracy != 'X'">
+      <div class="smallspace2"></div>
+      <ion-badge class="badge_accuracy"><i class="fa {{ sPopupAccuracyIcon }}"></i> {{ sPopupAccuracy }}%</ion-badge>
+      <div class="progress-bar-container">
+    		<div class="progress-bar-child progress {{ sPopupAccuracyClass }}"></div> <!-- Add progress_??? class dynamically here -->
+    		<div class="progress-bar-child shrinker timelapse"></div>
+      </div>
+  </div>
+
+  <!-- <div class="accuracy_line"></div> -->
+  <!-- <span class="accuracy_text"><i class="fa fa-check-circle-o"></i> &nbsp;Data Point Accuracy: 89%</span> -->
+</div>

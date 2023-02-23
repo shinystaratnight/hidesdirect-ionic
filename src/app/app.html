@@ -1,0 +1,21 @@
+<ion-menu [content]="content" persistent="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="ios_noleft_padding">Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="sidebar_bg2">
+    <img src="assets/imgs/hydes_direct_logo.png" class="img-responsive sidebar_logo">
+    <div class="smallspace1"></div>
+    <ion-list>
+         <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">{{p.title}}</button> -->
+         <ul class="sidebar_ul">
+            <li menuClose *ngFor="let p of pages" (click)="openPage(p)" class="sidemenu_item menu_option_color"><i class="{{p.icon}}"></i> <span style="nicefont">{{p.title}}</span></li>
+         </ul>
+      </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

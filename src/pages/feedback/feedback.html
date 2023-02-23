@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="ios_left_padding">Hydes App Feedback</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="custom_background5 content_font_dark nicefont">
+   <div class="standard_box centerthis">
+      <BR>
+      <img src="assets/imgs/hydes_direct_logo.png" class="about_logo">
+      <!-- <i class="fa fa-fw fa-leaf"></i><BR> -->
+      <!-- <i class="fa fa-fw fa-circle-o-notch fa-spin"></i> -->
+      <BR>
+   </div>
+   <div class="standard_box">
+          <BR>
+          <div id="feedbackdesc">Tell us what you think.  Our goal is continuous improvement
+              to help keep your ordering as convenient as possible.
+          </div>
+          <div class="smallspace3"></div>
+          <BR>
+          <form [formGroup]="formFeedback" id="feedbackformbox">
+              <ion-item no-lines class="nobottomline feedbackcolor">
+                 <ion-textarea placeholder="Add comments here..." class="feedback_textarea" [formControl]="formFeedback.controls['sFormFieldFeedback']" [(ngModel)]="sFormFieldFeedback" autocomplete="off" autocorrect="on"></ion-textarea>
+              </ion-item>
+              <BR><div class="smallspace1"></div>
+              <div class="buttonbox"><button id="feedbackbutton" class="standardbutton" ion-button block (click)="funcSendFeedback()" [disabled]="!sFormFieldFeedback">SEND FEEDBACK</button></div><BR>
+          </form>
+   </div>
+</ion-content>

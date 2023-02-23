@@ -1,0 +1,44 @@
+page-connect 
+{
+    .custom_title_font
+    {
+        color: #D60E15 !important;
+    }
+
+    .custom_input_font
+    {
+        color: #444444 !important;
+    }
+
+    form ion-item.item
+    {
+        overflow: visible !important;
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+
+    form ion-item.item ion-label
+    {
+        position: absolute;
+        top: -8px; /* How far to move placeholder and lablel up */       
+        left: 9px;        
+        margin: 0 !important;
+        transition: all 0.3s ease-in-out;
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+
+    form ion-item.item.item-input-has-value ion-label
+    {
+       top: -4px; /* How far to move placeholder and label up */  
+    }
+
+    form ion-item.item.item-input-has-focus ion-label
+    {
+       top: -4px; /* How far to move placeholder and label up */  
+    }
+
+    .item-label-stacked .text-input-md, .item-label-floating .text-input-md, button::-moz-focus-inner, input::-moz-focus-inner
+    {
+        background-color: rgba(0, 0, 0, 0) !important;
+        margin: 13px 0 0 !important; /* how far to move text up when entered into field */
+    }
+}

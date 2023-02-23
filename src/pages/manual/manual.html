@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="ios_left_padding">close<span class="text_logo_color">more</span> Scan <span class="smalltexttitle">(Manual)</span></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="custom_background6 content_font nicefont">
+   <!-- <div class="loading" id="loading_spinner"></div> -->
+   <div class="loading-ring" id="loading_spinner"><div></div><div></div><div></div><div></div></div>
+   <div class="standard_box">
+      <div class="imagebox">
+         <table width="100%" border="0">
+            <tr>
+              <td width="55" align="left" valign="top"><div class="backtohome nosee" (click)="funcBackToHome()"><i class="fa fa-fw fa-chevron-circle-left"></i></div></td>
+              <td align="center" valign="bottom"><img src="assets/imgs/closemore_logo.png" class="scan_front_logo"></td>
+              <td width="55" align="right" valign="top"><div class="backtohome" (click)="funcBackToHome()"><i class="fa fa-fw fa-chevron-circle-left"></i></div></td>
+            </tr>
+         </table>
+      </div>
+      <div class="smallspace5"></div>    
+      <div class="pagetextpadding">Begin typing an address to create a prospect profile.  Use the data and insights as talking points.</div><BR>
+
+      <ion-searchbar [(ngModel)]="inputAutoComplete.input" (ionInput)="funcUpdateSearch()" [showCancelButton]="true" (ionCancel)="dismiss()" placeholder="Enter address..."></ion-searchbar>
+      <div class="autocomplete_box" [hidden]="itemsAutoComplete.length == 0">
+          <ion-list class="autocomplete_list_object" [hidden]="itemsAutoComplete.length == 0">
+            <ion-item *ngFor="let item of itemsAutoComplete" tappable (click)="funcSelectAddress(item)" class="autocomplete_item">{{ item.description }}</ion-item>
+          </ion-list>
+      </div>
+      <div class="buttonbox">
+          <div class="smallspace2"></div><button id="getprofilebutton" class="standardbutton" ion-button block (click)="funcGetProfileButton()" [disabled]="!inputAutoComplete.input || disableButton">GET PROFILE</button>
+      </div>
+      <div class="getprofile_tagline"><span class="getprofile_tagtext">Understand, connect and close more.</span></div>
+  </div>
+</ion-content>
